@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background-color: black;
+            color: #f2f2f2;
+
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        a{
+            display: inline-block;
+            padding: 15px;
+            text-decoration: none;
+            color: #f2f2f2;
+
+        }
+        a:hover{
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <nav id="demo">
+        <!-- <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">products</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#"> contact us</a></li>
+        </ul> -->
+    </nav>
+    <h3>team</h3>
+    <p id="team"></p>
+    
+    <script>
+        let names= ["home" , "products" , "about us", "contact us"];
+        let ul=document.createElement("ul");
+        let nav=document.getElementById("demo");
+        // para.textContent=names[names.length-1];
+        for (let i = 0; i < names.length; i++) {
+            let li=document.createElement("li");
+            let anchor=document.createElement("a");
+            anchor.textContent=names[i];
+            anchor.href="#";
+            li.appendChild(anchor);
+            ul.appendChild(li);
+           
+           
+            
+        }
+       
+            nav.appendChild(ul);
+
+            let team={
+                name: "jhon dou", 
+                title: "ceo",
+                desc: " he is founder of compony..."
+            }
+
+            let para=document.getElementById("team");
+            debugger
+            para.innerHTML=team.name + "<br>"
+            para.innerHTML=team.desc;
+
+
+    </script>
+</body>
+</html>
